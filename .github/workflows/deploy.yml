@@ -31,4 +31,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
       - name: deploy to bucket
-        run: aws s3 cp --recursive webapp/ s3://duchessbalog --exclude "*.xml"
+        run: aws s3 cp --recursive src/main/webapp/ s3://duchessbalog --exclude "*.xml"
